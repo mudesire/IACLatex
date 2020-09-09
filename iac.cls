@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{iac}[2014/07/24 International Astronautical Congress conference paper LaTeX class]
+\ProvidesClass{iac}[2020/09/08 International Astronautical Congress conference paper LaTeX class]
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
@@ -62,7 +62,7 @@
 \renewcommand\maketitle{\twocolumn[
   \begin{@twocolumnfalse}
   \lhead{}\chead{\footnotesize \iac@conference th International Astronautical Congress-- {\iac@location}.\\ \iac@makecopyright}\rhead{}%
-  \lfoot{IAC--\iac@paperyear--\iac@papernumber}\cfoot{}\rfoot{Page \thepage\ of \pageref{LastPage}}%
+  \lfoot{IAC-\iac@paperyear,\iac@papernumber}\cfoot{}\rfoot{Page \thepage\ of \pageref{LastPage}}%
   \begingroup
     \global\@topnum\z@   % Prevents figures from going at top of page.
     \@maketitle
