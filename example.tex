@@ -1,13 +1,12 @@
 \documentclass[]{iac}
 % To make the list of abbreviations and symbols.
-\usepackage[acronym]{glossaries}
+\usepackage[automake,acronym]{glossaries}
 \makeglossaries
 \include{abbreviations}
-
+\makeglossaries
 \DeclareMathOperator{\E}{E}
 \DeclareMathOperator{\prob}{p}
 \DeclareMathOperator{\tr}{tr}
-
 \newcommand{\etalia}{\textit{et al.}}
 \newcommand*{\vectornorm}[1]{\left\|#1\right\|}
 \newcommand*\rfrac[2]{{{}^{#1}\!/_{#2}}} % running fraction with slash - requires math mode.
@@ -16,24 +15,20 @@
 \begin{document}
 
 \IACpaperyear{20}
-\IACpapernumber{D1.2.3}
+\IACpapernumber{B2.4.1}
 \IACconference{71}
 \IAClocation{The CyberSpace Edition, 12-14 October 2020}
 \IACcopyrightA{2020}{International Astronautical Federation (IAF)}
 
 \title{Manuscript Template and Style Guide (Title of your paper)}
 
-\IACauthor{Main-Author\textsuperscript{a}*,}{\textsuperscript{a} \emph{Department of Tourism and Hospitality, China
-    University of Science and Technology, 200 Chunghwa Street, Henshan
-    Village, Hsinchu County, Taiwan 31241}, \emph{\uline{eva77tw@cc.hc.cust.edu.tw}}}
+\input{authors}
 
-\IACauthor{Co-Author}{\textsuperscript{b} \emph{Department of Aerospace Engineering, Ryerson University, 350 Victoria Street, Toronto, Ontario, Canada M5B 2K3},
-\emph{\uline{editor-in-chief@iaamail.org}}}
+\abstract{~~~~Small satellite is part of a growing industry that caters to commercial, scientific and defense applications. Multiple launches and power constraints of small satellites require cost-effective and stable communication links.  Free-space laser communication (lasercom) is a promising candidate offering a high speed broadband network, with a less energy consuming and compact subsystem. Unlike radio frequency (RF), lasercom alleviates the licensing problems of RF spectrum regulation. Despite recognizable popularity, little research on lasercom for small satellites has been conducted on a comprehensive scale. This review discusses the current improvement in laser communication for small satellites. It examines innovative approaches in on-board Photonics for pointing strategies in atmospheric disturbances and vibrations mitigations. Due to the infeasibility of in-orbit maintenance, the crucial role of the multidisciplinary optimization of requirements for flexible and agile lasercom systems is addressed.}
 
+%\IACkeywords{maximum 6 keywords}{}{}{}{}{}
 
-\abstract{~~~~A concise and factual abstract (written in third person and in one paragraph) of no more than 400 words is required. The abstract should state briefly the purpose of the research, the principal results and major conclusions. An abstract must be stand alone and complete in itself with no references to the main body of the manuscript. References should be avoided, but if essential, then cite the author(s) and year(s). Also, non-standard or uncommon abbreviations should be avoided, but if essential they must be defined at their first mention in the abstract itself. Readers should not have to read the full text to understand the abstract. The abstract can be an updated version of the one submitted at the call-for-abstracts, but its contents must not differ substantially.}
-
-\IACkeywords{maximum 6 keywords}{}{}{}{}{}
+\IACkeywords{laser technology}{inter-satellite links}{small satellite}{pointing}{design optimization}{laserCom}
 
 \maketitle
 % Add list of symbols
@@ -70,8 +65,8 @@ When numbering equations, enclose numbers in brackets and place flush right with
 It is important to remember that all artwork, captions, figures (\textit{e.g.}, Fig.~\ref{fig:X}), graphs, and tables (such as Table~\ref{table:X}) will be reproduced exactly as you submitted them. (\textbf{Company logos} and \textbf{identification numbers} are not permitted on your illustrations.)
 
 \begin{figure}
-\includegraphics[width=\columnwidth]{examplefigure.png}
-\caption{\label{fig:X}Title of the figure, left-justified, subsequent text indented. Place figures at the top or bottom of a column wherever possible, as close as possible to the first references to them in the manuscript. Restrict them to single-column width unless this would make them illegible.}
+    \includegraphics[width=\columnwidth]{examplefigure.png}
+    \caption{\label{fig:X}Title of the figure, left-justified, subsequent text indented. Place figures at the top or bottom of a column wherever possible, as close as possible to the first references to them in the manuscript. Restrict them to single-column width unless this would make them illegible.}
 \end{figure}
 
 \subsection{Graph Lines, Drawings, and Tables}
@@ -80,18 +75,18 @@ Use black ink on white manuscript and position to fit within one of the columns 
 Tables with a moderate amount of information should be positioned within one column. Tables, graphs, or pictures with large amounts of information may extend across two columns.
 
 \begin{table}
-\begin{tabular}{rllll}
-\toprule
-& Venus & Earth & Mars & Jupiter \\
-\midrule
-$\rfrac{M}{M_E}$	& 0.82 		& 1 		& 0.11 		& 317.89	\\
-$e$					& 0.007		& 0.017		& 0.093		& 0.048		\\
-$R$ (AU)			& 0.7233	& 1			& 1.524		& 5.203		\\
-$i$ (deg)			& 3.40		& 0			& 1.85		& 1.30		\\
-$T$ (years)			& 0.62		& 1			& 1.88		& 11.86		\\
-\bottomrule
-\end{tabular}
-\caption{\label{table:X}Title of table, left justified, subsequent text indented. Heading centered. Do not use vertical lines within the table; use horizontal lines only to separate headings from table entries.}
+    \begin{tabular}{rllll}
+        \toprule
+        & Venus & Earth & Mars & Jupiter \\
+        \midrule
+        $\rfrac{M}{M_E}$	& 0.82 		& 1 		& 0.11 		& 317.89	\\
+        $e$					& 0.007		& 0.017		& 0.093		& 0.048		\\
+        $R$ (AU)			& 0.7233	& 1			& 1.524		& 5.203		\\
+        $i$ (deg)			& 3.40		& 0			& 1.85		& 1.30		\\
+        $T$ (years)			& 0.62		& 1			& 1.88		& 11.86		\\
+        \bottomrule
+    \end{tabular}
+    \caption{\label{table:X}Title of table, left justified, subsequent text indented. Heading centered. Do not use vertical lines within the table; use horizontal lines only to separate headings from table entries.}
 \end{table}
 
 \section{Style Guide}
